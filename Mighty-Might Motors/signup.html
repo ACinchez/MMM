@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/signup.css">
+    <title>SIGNUP</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <a href="Home.html">Mighty-Might Motors</a>
+      </div>
+       
+      </ul>
+  </nav> 
+          <div class="parent-div">
+            <div class="vertical-section-holder">
+                <section class="vertical-section-1"></section>
+                <section class="vertical-section-2">
+                    <div class="login-signup-holder">
+                        <div class="forms">
+                            <form class="login-form">
+                                <h2 class="heading-text">Login</h2>
+                                <input type="text" placeholder="Username"/>
+                                <input type="text" placeholder="Password"/>
+                                <button type="submit">Login</button>
+                                <p class="message">Not registered? <a href="#">Signup</a></p>
+                            </form>
+                            <form class="register-form" id="register-form">
+                                <h2 class="heading-text">Sign Up</h2>
+                                <input type="text" id="fname" placeholder="First Name" required/>
+                                <p class="errors" id="error1"></p>
+                                <input type="text" id="lname" placeholder="Last Name" required/>
+                                <p class="errors" id="error2"></p>
+                                <input type="text" id="phone" placeholder="Phone" required/>
+                                <p class="errors" id="error3"></p>
+                                <input type="text" id="address" placeholder="Address" required/>
+                                <p class="errors" id="error4"></p>
+                                <input type="email" id="email" placeholder="Email" required/>
+                                <p class="errors" id="error5"></p>
+                                <input onkeyup="trigger()" type="password" id="password" placeholder="Password" required/>
+                                <p class="errors" id="error6"></p>
+                                <div class="indicator"><span class="weak"></span> <span class="medium"></span> <span
+                                        class="strong"></span></div>
+                                <div class="strength"></div>
+                                <input type="password" id="cpassword" placeholder="Confirm Password" required/>
+                                <p class="errors" id="error7"></p>
+                                <button type="submit"> Signup</button>
+                                <p class="message">Already registered? <a href="Login.html">Login</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+</body>
+</html>

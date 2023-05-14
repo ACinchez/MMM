@@ -6,6 +6,8 @@
 	<title>Mighty-Might Motors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/Home.css">
+	<!-- normalize css link optional -->
+	<!-- <link rel="stylesheet" href="styles/normalize.css"> --> 
 </head>
 <body>
     <nav class="navbar">
@@ -14,21 +16,27 @@
             <a href="Home.html">Mighty-Might Motors</a>
           </div>
           <ul class="navbar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
            
           </ul>
-          <div class="navbar-cart">
-            <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+		  <div class="navbar-cart">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+			<div class="foot">
+				<h2 id="total">$ 0.00</h2>
+			</div>
           </div>
-          <div class="login">
-            <a href="Login.html"><i class="fa fa-user"></i> </a>
-          </div>
+		  <div class="login">
+			<div class="dropdown">
+			  <button class="dropbtn"><i class="fa fa-user"></i></button>
+			  <div class="dropdown-content">
+				<a href="Login.html">Login</a>
+				<a href="signup.html">Sign Up</a>
         </div>
-      </nav>
-
+      </nav> 
+	  <div class="Her"> 
 	  <div id="slider">
         <ul id="slideWrap"> 
             <li><img src="images/banner.jpg" alt=""></li>
@@ -40,12 +48,12 @@
           <a id="prev" href="#">&#8810;</a>
           <a id="next" href="#">&#8811;</a>
     </div>
-
+</div>
 	<main>
 		<div class="text">
-			<h1>Mighty-Might Motors</h1>
+			<h1>Mighty Motors</h1>
 			<p>
-				Welcome to Mighty-Mite Motors, the ultimate destination for toy enthusiasts! Our website is dedicated to providing you with a vast selection of high-quality toys, ranging from classic to modern designs, at competitive prices. <br>
+				Welcome to Mighty Motors, the ultimate destination for toy enthusiasts! Our website is dedicated to providing you with a vast selection of high-quality toys, ranging from classic to modern designs, at competitive prices. <br>
 				At Mighty-Mite Motors, we understand the importance of imaginative play and its impact on child development, which is why we are committed to offering only the best toys that will ignite your child's creativity and imagination. <br>
 				From remote-controlled cars to action figures and dolls, our online toy store has something for everyone. Browse our website today and discover a world of fun and adventure with Mighty-Mite Motors!
 			</p>
@@ -63,7 +71,7 @@
 					<img src="pictures/1.jpg" alt="">
 				</picture>
 				<div class="detail">
-					<p>
+					<p>	
 						<b>Product One</b><br>
 						<small>New arrival</small>
 					</p>
@@ -252,8 +260,44 @@
 			</div>
 		</section>
 	</main>
-    <div></div>
+    <div class="ad-section">
+		<div class="ad">
+			<h2>DISCOUNTED!!</h2>
+		  <img src="images/banner3.jpg" alt="Advertisement">
+		  <h2>Buy now and get 10% off!</h2>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis est in dolor finibus, ac vestibulum nulla vestibulum. Donec eu luctus ex.</p>
+		  <a href="#" class="cta-btn">Shop Now</a>
+		</div>
+	  </div>
+
+
 </body>
+<footer>
+	<div class="about">
+	  <h3>About</h3>
+	  <ul>
+		<li><a href="#">Our Story</a></li>
+		<li><a href="#">Team</a></li>
+		<li><a href="#">Careers</a></li>
+		<li><a href="#">Press</a></li>
+	  </ul>
+	</div>
+	<div class="newsletter">
+	  <h3>Subscribe to our Newsletter</h3>
+	  <form>
+		<label for="email">Enter your email address:</label>
+		<input type="email" id="email" name="email">
+		<button type="submit">Subscribe</button>
+	  </form>
+	</div>
+	<div class="contact">
+	  <h3>Contact Us</h3>
+	  <p>123 Main St, Davao Philippines</p>
+	  <p>Phone: (555) 555-5555</p>
+	  <p>Email: M-MM_support@gmail.com</p>
+	</div>
+  </footer>
 </html>
-<script src="scripts/carousel.js"></script>
+	<script src="scripts/carousel.js"></script>
 <script type="text/javascript" src="scripts/home.js"></script>
+<script src="scripts/shop.js"></script>
