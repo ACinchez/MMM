@@ -1,0 +1,38 @@
+<div class="cashier-section">
+    <h2>Cashier</h2>
+    <form>
+      <label for="item">Item:</label>
+      <input type="text" id="item" name="item" required>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" required>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required>
+      <button type="submit">Add to Cart</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="cart-total"></div>
+    <button id="checkout-btn">Checkout</button>
+  </div>
+  
+  <div class="sales-agent-section">
+    <h2>Sales Agent</h2>
+    <label for="customer-select">Select Customer:</label>
+    <select id="customer-select" name="customer">
+      <option value="">--Select a Customer--</option>
+      <option value="John Smith">John Smith</option>
+      <option value="Jane Doe">Jane Doe</option>
+      <option value="Bob Johnson">Bob Johnson</option>
+    </select>
+    <button id="assign-agent-btn">Assign Agent</button>
+  </div>
+  

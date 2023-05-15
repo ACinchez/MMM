@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -webkit-pictograph;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.nothin{
+  padding: 0;
+  margin: 0;
+      
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+  /* navbar area */
+
+        /* Navbar styles */
+        .navbar {
+            background-color:  transparent;
+            box-shadow: none;
+            position: static;
+            top: 0;
+            z-index: 999;
+          }
+          
+          .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+          }
+          
+          .navbar-logo a {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+          }
+          
+          .navbar-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .navbar-menu li {
+            margin-right: 20px;
+          }
+          
+          .navbar-menu li a {
+            color: #333;
+            text-decoration: none;
+          }
+          
+          .navbar-cart {
+            display: flex;
+            align-items: center;
+          }
+          
+          .navbar-cart a {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+          }
+          
+          .navbar-cart i {
+            margin-right: 5px;
+          }
+        
+          .login{
+            display: flex;
+            align-items: center;
+        
+          }
+        
+          .login a{
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+          }
+          /* Dropdown Button */
+        .dropbtn {
+            background-color: transparent;
+            color: #555;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          /* Dropdown content (hidden by default) */
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+          }
+          
+          /* Links inside the dropdown */
+          .dropdown-content a {
+            color: #555;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+            background-color: #f1f1f1;
+          }
+          
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          
+          /* Show the dropdown menu when the button is clicked */
+          .show {
+            display: block;
+          }
+        
+          /* FOOTER */
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    font-size: 14px;
+    }
+    
+    .about,
+    .newsletter,
+    .contact {
+    margin-right: 50px;
+    }
+    
+    .about h3,
+    .newsletter h3,
+    .contact h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+    
+    .about ul,
+    .contact p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    
+    .about li,
+    .contact p {
+    margin-bottom: 10px;
+    }
+    
+    .about a,
+    .contact a {
+    color: #fff;
+    text-decoration: none;
+    }
+    
+    .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    
+    .newsletter label {
+    margin-bottom: 10px;
+    }
+    
+    .newsletter input[type="email"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 250px;
+    margin-bottom: 10px;
+    }
+    
+    .newsletter button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    @media screen and (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .about,
+    .newsletter,
+    .contact {
+      margin: 0 0 30px 0;
+    }
+    
+    .about,
+    .contact {
+      order: 2;
+    }
+    }

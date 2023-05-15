@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/banner2.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.parent-div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+.vertical-section-holder {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-section-1 {
+  flex: 0.65;
+  background-size: cover;
+  
+}
+
+.vertical-section-2 {
+  flex: 0.35;
+}
+
+.login-signup-holder {
+  width: 360px;
+  padding: 10% 0 0;
+  margin: 0 auto;
+}
+
+.forms {
+  background: transparent;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+}
+
+.forms .heading-text {
+  padding: 10px;
+  color: midnightblue;
+}
+
+.forms input {
+  font-family: "Roboto", sans-serif;
+  outline: 1px;
+  background: white;
+  width: 100%;
+  border: 0;
+  margin: 15px 0 0 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.forms button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  margin: 10px 0 0 0;
+  background: #453FCF;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*
+.button {
+display: inline-block;
+border: none;
+text-decoration: none;
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+background: #453FCF;
+width: 89%;
+padding: 15px;
+color: #ffffff;
+font-size: 14px;
+cursor: pointer;
+}
+*/
+.forms .message {
+  margin: 15px 0 0;
+  color: aliceblue;
+  font-size: 16px;
+}
+
+.forms .message a {
+  color: #453FCF;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.forms button:hover, .forms button:active {
+  background: #7F39FF;
+}
+
+.button:hover, .button:active {
+  background: #7F39FF;
+}
+
+.forms .login-form {
+  display: none;
+}
+
+.errors {
+  color: darkblue;
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+  font-size: 14px;
+  font-style: oblique;
+  text-align: left;
+}
+
+.indicator {
+  border-radius: 6px;
+  padding: 4px;
+  background-color: #453FCF;
+  height: 10px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.indicator span {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+.indicator span:nth-child(2) {
+  margin: 0 3px;
+}
+
+.indicator span.active:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.indicator span.weak:before {
+  background-color: #ff4757;
+}
+
+.indicator span.medium:before {
+  background-color: orange;
+}
+
+.indicator span.strong:before {
+  background-color: #23ad5c;
+}
+
+.strength {
+  border-radius: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #453FCF;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.strength.weak {
+  color: #ff4757;
+}
+
+.strength.medium {
+  color: orange;
+}
+
+.strength.strong {
+  color: #23ad5c;
+}
+
+.footer {
+  font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+/* Navbar styles */
+.navbar {
+  background-color: transparent;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  }
+  
+  .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  
+  .navbar-logo a {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  }
+  
+  .navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .navbar-menu li {
+  margin-right: 20px;
+  }
+  
+  .navbar-menu li a {
+  color: #333;
+  text-decoration: none;
+  }
+  
+  .navbar-cart {
+  display: flex;
+  align-items: center;
+  }
+  
+  .navbar-cart a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  }
+  
+  .navbar-cart i {
+  margin-right: 5px;
+  }
+  
+  .login{
+  display: flex;
+  align-items: center;
+  
+  }
+  
+  .login a{
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+  background-color:  transparent;
+  color: #555;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+  background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  
+  /* Show the dropdown menu when the button is clicked */
+  .show {
+  display: block;
+  }

@@ -1,142 +1,160 @@
 @charset "utf-8";
-		*{
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-			font-family: -webkit-pictograph;
-		}
-        
-		main{
-			width: 100%;
-			height: 840px;
-			/*background: red;*/
-			margin: 10px auto;
-			position: relative;
-			padding: 5px 0;
-		}
-		main .text{
-			padding: 10px;
-			text-align: center;
-			/*font-size: 30px;*/
-			color: #554;
-		}
-		.text h1{
-			font-size: 50px;
-		}
-		.text p{
-			width: 60%;
-			padding: 5px;
-			margin: auto;
-			line-height: 30px;
-		}
-		main header{
-			width: 98%;
-			height: 60px;
-			margin: 0 auto;
-			/*background: gray;*/
-			display: flex;
-			align-items: center;
-			padding: 20px;
-			justify-content: space-between;
-			border-bottom: 2px solid #ddd;
-		}
-		header p span{
-			font-size: 40px;
-		    margin: 0 5px;
-		    cursor: pointer;
-		    color: #555;
-		     width: 30px;
-		    height: 30px;
-		    display: inline-block;
-		    line-height: 19px;
-		    text-align: center;
-		    border-radius: 3px;
-		}
-		header p span:hover{
-			background: #222;
-    		color: white;
-		}
-		section{
-			width: 98%;
-			height: 600px;
-			/*background: red;*/
-			margin: auto;
-			display: flex;
-			align-items: center;
-			overflow-x: auto;
-            padding: 40px;
-		}
-		section::-webkit-scrollbar{
-			display: none;
-		}
-		section .product{
-			min-width: 24%;
-			height: 90%;
-			background: whitesmoke;
-			margin:  0 20px  0 0;
-			border-radius: 20px;
-			position: relative;
-			left: 0;
-			transition: 0.5s;
+		
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -webkit-pictograph;
+  /* background: #AA076B;  fallback for old browsers */
+/* background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to right, #61045F, #AA076B); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 
-		}
-		picture{
-			width: 100%;
-			height: 70%;
-			padding: 20px;
-			/*background: green;*/
-			display: flex;
-			overflow: hidden;
-			margin-bottom: 20px;
-		}
-		picture img{
-			width: 100%;
-		}
-		.detail,
-		.button{
-			width: 90%;
-			/*background: red;*/
-			margin: auto;
-			padding: 5px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height: 50px;
-			font-size: 20px;
-			color: #444;
-		}
-		small{color: #555;}
-		a{
-			text-decoration: none;
-			padding: 6px 14px;
-		    font-size: 15px;
-		    margin: 5px 0 0 20px;
-		    display: inline-block;
-		    background: none;
-		    color: white;
-		}
-		p.star{
-			margin: 5px auto;
-		    width: 65%;
-		    font-size: 25px;
-		    color: #808080;
-		}
-		@media (max-width: 768px) {
-			.text h1{
-				font-size: 35px;
-			}
-			.text p{
-				width: 90%;
-			}
-			header h1{
-				font-size: 25px;
-			}
-			header p span{
-				font-size: 30px;
-			}
-			section .product {
-				min-width: 49%;
-				margin:  0 10px  0 0;
+}
+main {
+  width: 100%;
+  height: 840px;
+  margin: 10px auto;
+  position: relative;
+  padding: 5px 0;
+}
+
+main .text {
+  padding: 10px;
+  text-align: center;
+  color: #554;
+}
+
+.text h1 {
+  font-size: 50px;
+}
+
+.text p {
+  width: 60%;
+  padding: 5px;
+  margin: auto;
+  line-height: 30px;
+}
+
+main header {
+  width: 98%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+}
+
+header p span {
+  font-size: 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #555;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 19px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+header p span:hover {
+  background: #222;
+  color: white;
+}
+
+section {
+  width: 98%;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding: 40px;
+}
+
+section::-webkit-scrollbar {
+  display: none;
+}
+
+section .product {
+  min-width: 24%;
+  height: 90%;
+  background: whitesmoke;
+  margin: 0 20px 0 0;
+  border-radius: 20px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+picture {
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+picture img {
+  width: 100%;
+}
+
+.detail,
+.button {
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+  color: #444;
+}
+
+small {
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px 14px;
+  font-size: 15px;
+  margin: 5px 0 0 20px;
+  display: inline-block;
+  background: none;
+  color: white;
+}
+
+p.star {
+  margin: 5px auto;
+  width: 65%;
+  font-size: 25px;
+  color: #808080;
+}
+
+@media (max-width: 768px) {
+  main {
+    height: auto;
+  }
+  .text h1 {
+    font-size: 35px;
+  }
+  .text p {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 25px;
+  }
+  header p span {
+    font-size: 30px;
+  }
+  section .product {
+    min-width: 49%;
+				margin:0 10px  0 0;
 			}
 			.detail, .button{
 				font-size: 16px;
@@ -150,80 +168,123 @@
         /* navbar area */
 
         /* Navbar styles */
-.navbar {
-    background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .navbar-logo a {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .navbar-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-menu li {
-    margin-right: 20px;
-  }
-  
-  .navbar-menu li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .navbar-cart {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-cart a {
-    display: flex;
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .navbar-cart i {
-    margin-right: 5px;
-  }
-
-  .login{
-    display: flex;
-    align-items: center;
-
-  }
-
-  .login a{
-    display: flex;
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-  }
-
+		.navbar {
+			background-color: transparent;
+			box-shadow: none;
+			position: static;
+			top: 0;
+			z-index: 999;
+		  }
+		  
+		  .navbar-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		  }
+		  
+		  .navbar-logo a {
+			font-size: 28px;
+			font-weight: bold;
+			color: #333;
+		  }
+		  
+		  .navbar-menu {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		  }
+		  
+		  .navbar-menu li {
+			margin-right: 20px;
+		  }
+		  
+		  .navbar-menu li a {
+			color: #333;
+			text-decoration: none;
+		  }
+		  
+		  .navbar-cart {
+			display: flex;
+			align-items: center;
+		  }
+		  
+		  .navbar-cart a {
+			display: flex;
+			align-items: center;
+			color: #333;
+			text-decoration: none;
+		  }
+		  
+		  .navbar-cart i {
+			margin-right: 5px;
+		  }
+		  
+		  .login{
+			display: flex;
+			align-items: center;
+		  
+		  }
+		  
+		  .login a{
+			display: flex;
+			align-items: center;
+			color: #333;
+			text-decoration: none;
+		  }
+		  
+		  /* Dropdown Button */
+		  .dropbtn {
+			background-color:  transparent;
+			color: #555;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		  }
+		  
+		  /* Dropdown content (hidden by default) */
+		  .dropdown-content {
+			display: none;
+			position: absolute;
+			z-index: 1;
+		  }
+		  
+		  /* Links inside the dropdown */
+		  .dropdown-content a {
+			color: #555;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		  }
+		  
+		  /* Change color of dropdown links on hover */
+		  .dropdown-content a:hover {
+			background-color: #f1f1f1;
+		  }
+		  
+		  /* Show the dropdown menu on hover */
+		  .dropdown:hover .dropdown-content {
+			display: block;
+		  }
+		  
+		  /* Show the dropdown menu when the button is clicked */
+		  .show {
+			display: block;
+		  }
 
   /* CAROUSEL  */
 
   body {
     margin: 0;
-    padding-top: 60px;
+    padding-top: 0;
+  }
+  
+  .her{
+	background-color: #0062cc;
   }
   
   #slider {
@@ -234,6 +295,7 @@
     height: 400px;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+	background-color: #0062cc;
 	
   }
   
@@ -244,7 +306,8 @@
     width: 500%;
     padding: 0;
     margin: 0;
-    transition: all 750ms ease;
+    transition: all 550ms ease;
+	/* transition: 10s; */
     left: -100%; /* start at the first image */
   }
   
@@ -290,4 +353,153 @@
     background-color: rgba(0, 0, 0, 0.5);
     text-shadow: 0;
   }
+  
+  /* ADVERTISEMENT */
+
+
+  .ad-section {
+	background-color: #f5f5f5;
+	padding: 50px 0;
+  }
+  
+  .ad {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  .ad img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	margin-bottom: 20px;
+  }
+  
+  .ad h2 {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .ad p {
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  .cta-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+	background-color: #0062cc;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 50px;
+	font-size: 14px;
+  }
+  
+  .about,
+  .newsletter,
+  .contact {
+	margin-right: 50px;
+  }
+  
+  .about h3,
+  .newsletter h3,
+  .contact h3 {
+	font-size: 18px;
+	margin-bottom: 20px;
+  }
+  
+  .about ul,
+  .contact p {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  .about li,
+  .contact p {
+	margin-bottom: 10px;
+  }
+  
+  .about a,
+  .contact a {
+	color: #fff;
+	text-decoration: none;
+  }
+  
+  .newsletter form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+  }
+  
+  .newsletter label {
+	margin-bottom: 10px;
+  }
+  
+  .newsletter input[type="email"] {
+	padding: 8px;
+	border-radius: 4px;
+	border: none;
+	width: 250px;
+	margin-bottom: 10px;
+  }
+  
+  .newsletter button[type="submit"] {
+	padding: 8px 20px;
+	background-color: #fff;
+	color: #333;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+	footer {
+	  flex-direction: column;
+	  align-items: center;
+	  padding: 30px;
+	  text-align: center;
+	}
+	
+	.about,
+	.newsletter,
+	.contact {
+	  margin: 0 0 30px 0;
+	}
+	
+	.about,
+	.contact {
+	  order: 2;
+	}
+  }
+
+
+  
+
+
+
+
   

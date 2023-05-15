@@ -1,0 +1,62 @@
+.cashier-section {
+    margin-bottom: 50px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .sales-agent-section {
+    margin-top: 50px;
+  }
+  
+  #assign-agent-btn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  

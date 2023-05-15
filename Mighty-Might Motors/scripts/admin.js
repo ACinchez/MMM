@@ -1,97 +1,87 @@
-const API_URL = 'https://example.com/api/users';
+const form = document.getElementById('form');
+const titleInput = document.getElementById('title');
+const descInput = document.getElementById('description');
+const tableBody = document.getElementById('table-body');
 
-function getUsers() {
-  fetch(API_URL, {
-    headers: {
-      'Authorization': 'Bearer ' + getAdminToken(),
-    },
-  })
-  .then(response => response.json())
-  .then(users => {
-    const userList = document.getElementById('user-list');
-    userList.innerHTML = '';
-    users.forEach(user => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${user.id}</td>
-        <td>${user.name}</td>
-        <td>${user.email}</td>
-        <td>${user.password}</td>
-        <td>
-          <button onclick="editUser(${user.id})">Edit</button>
-          <button onclick="deleteUser(${user.id})">Delete</button>
-        </td>
-      `;
-      userList.appendChild(tr);
+// Define a variable to store the inventory items
+let inventory = [];
+
+// Define a function to add an item to the inventory
+function addItem(title, description) {
+  inventory.push({ title, description });
+  displayInventory();
+}
+
+// Define a function to display the inventory items in the table
+function displayInventory() {
+  tableBody.innerHTML = '';
+  inventory.forEach((item, index) => {
+    const tr = document.createElement('tr');
+    const titleTd = document.createElement('td');
+    const descTd = document.createElement('td');
+    const actionTd = document.createElement('td');
+    const deleteBtn = document.createElement('button');
+    const editBtn = document.createElement('button');
+
+    titleTd.textContent = item.title;
+    descTd.textContent = item.description;
+    deleteBtn.textContent = 'Delete';
+    editBtn.textContent = 'Edit';
+
+    deleteBtn.addEventListener('click', () => {
+      deleteItem(index);
     });
+
+    editBtn.addEventListener('click', () => {
+      editItem(index);
+    });
+
+    actionTd.appendChild(editBtn);
+    actionTd.appendChild(deleteBtn);
+
+    tr.appendChild(titleTd);
+    tr.appendChild(descTd);
+    tr.appendChild(actionTd);
+
+    tableBody.appendChild(tr);
   });
 }
 
-function createUser() {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  fetch(API_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + getAdminToken(),
-    },
-    body: JSON.stringify({ name, email, password }),
-  })
-  .then(response => { 
-    if (response.ok) {
-        getUsers();
-      } else {
-        alert('Error creating user');
-      }
-    });
+// Define a function to delete an item from the inventory
+function deleteItem(index) {
+  inventory.splice(index, 1);
+  displayInventory();
 }
 
-function editUser(id) {
-const name = prompt('Enter new name:');
-const email = prompt('Enter new email:');
-const password = prompt('Enter new password:');
-fetch(API_URL + '/' + id, {
-method: 'PUT',
-headers: {
-'Content-Type': 'application/json',
-'Authorization': 'Bearer ' + getAdminToken(),
-},
-body: JSON.stringify({ name, email, password }),
-})
-.then(response => {
-if (response.ok) {
-getUsers();
-} else {
-alert('Error editing user');
-}
-});
+// Define a function to edit an item in the inventory
+function editItem(index) {
+  const item = inventory[index];
+  titleInput.value = item.title;
+  descInput.value = item.description;
+
+  form.removeEventListener('submit', handleSubmit);
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    item.title = titleInput.value;
+    item.description = descInput.value;
+    displayInventory();
+    form.reset();
+    form.removeEventListener('submit', handleSubmit);
+    form.addEventListener('submit', handleSubmit);
+  });
 }
 
-function deleteUser(id) {
-if (confirm('Are you sure you want to delete this user?')) {
-fetch(API_URL + '/' + id, {
-method: 'DELETE',
-headers: {
-'Authorization': 'Bearer ' + getAdminToken(),
-},
-})
-.then(response => {
-if (response.ok) {
-getUsers();
-} else {
-alert('Error deleting user');
-}
-});
-}
+// Define a function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault();
+  const title = titleInput.value;
+  const description = descInput.value;
+  addItem(title, description);
+  form.reset();
 }
 
-function getAdminToken() {
-// This function should retrieve an admin authentication token
-// from a secure source, such as a cookie or localStorage.
-// For the purposes of this example, we'll just hard-code it.
-return 'example_token';
-}
+// Add event listeners
+form.addEventListener('submit', handleSubmit);
 
-getUsers();
+// Initialize the table
+displayInventory();
